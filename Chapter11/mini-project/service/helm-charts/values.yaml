@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: <AWS ECR Repository URL>
+  repository: 901161062765.dkr.ecr.ap-northeast-2.amazonaws.com/test-project
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: red
