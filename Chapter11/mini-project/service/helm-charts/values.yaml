@@ -50,12 +50,12 @@ ingress:
   annotations: 
       alb.ingress.kubernetes.io/scheme: internet-facing
       alb.ingress.kubernetes.io/target-type: ip
-      alb.ingress.kubernetes.io/subnets: <Public Subnet1 ID>, <Public Subnet2 ID>
+      alb.ingress.kubernetes.io/subnets: subnet-0b25a846, subnet-f9e39a90
       kubernetes.io/ingress.class: alb
-      alb.ingress.kubernetes.io/certificate-arn: <ACM의 ARN>
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:901161062765:certificate/6cd35b34-e92c-41cb-966f-4453469481ef
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]' 
   hosts:
-    - host: <마이크로서비스 DNS도메인명>
+    - host: bubblepop.delivery30.co.kr
       paths:
         - path: /
           pathType: Prefix
